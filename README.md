@@ -1,6 +1,8 @@
 # find-spirit
 找到一种让精灵无处可躲的策略
 
+# 问题描述
+
 你在森林里发现了**五**个神秘的罐子。
 
 在罐子中藏着一个精灵，只要把他放出来就可以让他帮你实现一个愿望。
@@ -16,7 +18,7 @@
 
 请问，要怎么样利用这**六次机会**才能保证最后一定可以抓住精灵？
 
----
+# 分析
 
 这个难点在于精灵可以移动
 
@@ -76,7 +78,7 @@ graph LR
 
 所以问题可以进一步转为，是否存在一种罐子的打开顺序`abcdef`，使得精灵不论采用哪种初始位置和移动策略，都会被找到？
 
----
+# 暴力搜索
 
 直接找很难，可以尝试暴力搜索
 
@@ -107,3 +109,37 @@ List<List<Integer>> spiritMoves = strategies.stream().filter(JudgeUtil::isSpirit
 
 相反，如果**不存在**一种精灵的移动策略b，可以让精灵无法被罐子的打开策略a找到，说明这个罐子的打开策略**可以**保证100%找到精灵；
 
+# 运行代码
+
+这是一个maven项目，确保你已经安装：
+
+* Git
+* Maven
+* Java
+
+通过命令行
+
+```shell
+git clone https://github.com/Anilople/find-spirit.git
+cd find-spirit
+mvn clean compile
+cd target
+java -cp classes com.github.anilople.bottle.BottleApplication
+```
+
+得到输出
+
+```
+罐子的编号分别为[0, 1, 2, 3, 4]
+5^6=15625
+策略总共有15625种
+精灵移动的方式有72种
+开始搜索让精灵无处可躲的罐子打开顺序
+找到了4种策略，分别是
+[1, 2, 3, 1, 2, 3]
+[1, 2, 3, 3, 2, 1]
+[3, 2, 1, 1, 2, 3]
+[3, 2, 1, 3, 2, 1]
+```
+
+主类为`com.github.anilople.bottle.BottleApplication`

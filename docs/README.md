@@ -1,6 +1,8 @@
 # find-spirit
 找到一种让精灵无处可躲的策略
 
+[for-search-test](for-search-test.md)
+
 # 问题描述
 
 你在森林里发现了**五**个神秘的罐子。

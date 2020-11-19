@@ -19,6 +19,7 @@
     mermaid.initialize({ startOnLoad: false });
 
     window.$docsify = {
+      loadSidebar: true,
       name: 'find-spirit',
       repo: 'https://github.com/Anilople/find-spirit',
       markdown: {
@@ -51,7 +52,8 @@
   </script>
   <!-- Docsify v4 -->
   <script src="./vendor/docsify/lib/docsify.min.js"></script>
-  <script src="./vendor/docsify/lib/plugins/search.js"></script>
+  <!-- <script src="./vendor/docsify/lib/plugins/search.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 </body>
 
 </html>

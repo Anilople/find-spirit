@@ -266,6 +266,9 @@
           namespaceSuffix = matches[0];
         }
       }
+      paths.unshift(namespaceSuffix + '/');
+    } else {
+      paths.unshift('/');
     }
 
     var expireKey = resolveExpireKey(config.namespace) + namespaceSuffix;

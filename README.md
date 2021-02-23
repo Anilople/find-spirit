@@ -147,3 +147,5 @@ java -cp classes com.github.anilople.bottle.BottleApplication
 # workflows
 
 pull request test
+
+pull request code format test

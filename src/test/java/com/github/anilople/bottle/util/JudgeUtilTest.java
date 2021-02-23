@@ -33,11 +33,7 @@ public class JudgeUtilTest {
             Arrays.asList(1, 2, 3), Arrays.asList(Arrays.asList(3, 2, 1), Arrays.asList(1, 3, 3))));
     assertFalse(
         JudgeUtil.existEqualInAll(
-          
-            Arrays.   asList(1, 2, 3),   
-                Arrays.asList(Arrays.asList(3, 3, 1), Arrays.asList(3, 2, 1), Arrays.asList(1, 3, 3))));
+            Arrays.asList(1, 2, 3),
+            Arrays.asList(Arrays.asList(3, 3, 1), Arrays.asList(3, 2, 1), Arrays.asList(1, 3, 3))));
   }
-  
-  
-  
 }
